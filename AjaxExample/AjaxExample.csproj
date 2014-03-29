@@ -230,6 +230,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\_Details.cshtml" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <Content Include="Views\Home\_About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

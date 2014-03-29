@@ -13,5 +13,10 @@ namespace AjaxExample.Controllers
         {
             return View("_Details");
         }
+
+        public ActionResult About()
+        {
+            return View("_About");
+        }
     }
 }
