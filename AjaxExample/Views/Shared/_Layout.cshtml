@@ -47,7 +47,8 @@
             </div>
         </section>
         <script type="text/javascript" src="@Url.Content("~/scripts/require.js")"></script>
-        <script type="text/javascript" src="@Url.Content("~/scripts/config.js")"></script>
+        @* Load configuration synchronously so that it's done before including the application *@
+        <script type="text/javascript" src="@Url.Content("~/scripts/main.js")"></script>
         @RenderSection("scripts", required: false)
     </body>
 </html>

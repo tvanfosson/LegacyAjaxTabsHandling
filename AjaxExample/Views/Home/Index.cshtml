@@ -1,3 +1,15 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content("~/content/scripts/app.js")"></script>
+}
+<div id="tabs">
+    <ul>
+        <li><a href="@Url.Action("summary")">Summary</a></li>
+        <li><a href="@Url.Action("details")">Details</a></li>
+        <li><a href="@Url.Action("about")">About</a></li>
+    </ul>
+</div>
