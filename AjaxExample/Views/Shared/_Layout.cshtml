@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Legacy AJAX Tabs</title>
+    <link rel="stylesheet" href="@Url.Content("~/content/styles/reset.css")" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="@Url.Content("~/content/styles/site.css")" />
+    @RenderSection("headerStyles", required: false)
+    @RenderSection("headerScripts", required: false)
+</head>
+    <body>
+        <section class="header-content">
+            <header>
+                <h1>Legacy Ajax Tabs Example</h1>
+            </header>
+        </section>
+        <section class="body-content">
+            @RenderBody()
+        </section>
+        <section class="footer-content">
+            <footer>
+                <p>&copy; @DateTime.Now.Year</p>
+            </footer>
+        </section>
+        <script type="text/javasvcript" src="@Url.Content("~/scripts/require.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/scripts/config.js")"></script>
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
