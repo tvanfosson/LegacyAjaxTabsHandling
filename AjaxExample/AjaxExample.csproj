@@ -123,6 +123,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\scripts\app.js" />
+    <Content Include="Content\scripts\controllers\details.js" />
+    <Content Include="Content\scripts\controllers\summary.js" />
     <Content Include="Content\scripts\legacyapp.js" />
     <Content Include="Content\styles\reset.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
