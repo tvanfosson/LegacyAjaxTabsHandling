@@ -9,14 +9,19 @@ namespace AjaxExample.Controllers
             return View();
         }
 
+        public ActionResult Summary()
+        {
+            return PartialView("_Summary");
+        }
+
         public ActionResult Details()
         {
-            return View("_Details");
+            return PartialView("_Details");
         }
 
         public ActionResult About()
         {
-            return View("_About");
+            return PartialView("_About");
         }
     }
 }
