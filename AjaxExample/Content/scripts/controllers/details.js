@@ -7,7 +7,10 @@
 
     details.prototype.init = function () {
         this.setupHandlers()
-            .bind();
+            .bind()
+            .createChildren();
+
+        return this;
     };
 
     details.prototype.setupHandlers = function () {
@@ -17,6 +20,29 @@
     details.prototype.bind = function () {
         this.$container = $(this.selector);
         return this;
+    };
+
+    details.prototype.createChildren = function () {
+        this.$someDetails = $('<ul>');
+        var $listItems = $('<li>');
+
+        var textItems = [
+            'these',
+            'are',
+            'details'
+        ];
+
+        textItems.forEach(function (text) {
+            var $item = $('<li>');
+            $listItems.append($item);
+            $item.text(text);
+        });
+
+        this.$someDetails.append($listItems);
+    };
+
+    details.prototype.render = function() {
+        this.$container.append(this.$someDetails);
     };
 
     return details;

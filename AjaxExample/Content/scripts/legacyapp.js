@@ -1,4 +1,10 @@
-﻿require(['require', 'jquery', 'bootstrap', 'jquery-ui', 'jquery-validate-unobtrusive'], function (require) {
+﻿define([
+    'require',
+    'jquery',
+    'bootstrap',
+    'jquery-ui',
+    'jquery-validate-unobtrusive'
+], function (require, $) {
     'use strict';
 
     var $ = require('jquery');
