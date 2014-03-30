@@ -4,7 +4,9 @@
 
 @section scripts
 {
-    <script type="text/javascript" src="@Url.Content("~/content/scripts/app.js")"></script>
+    <script>
+        require(['./app']);
+    </script>
 }
 <div id="tabs">
     <ul>
