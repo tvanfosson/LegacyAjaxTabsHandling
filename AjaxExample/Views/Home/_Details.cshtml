@@ -1,3 +1,78 @@
-﻿<div class="js-details-container">
+﻿@model AjaxExample.Models.DetailsViewModel
+
+@functions
+{
+    public IHtmlString HiddenClass(bool isEditor = false)
+    {
+        if ((isEditor && Model.Loaded) || (!isEditor && !Model.Loaded))
+        {
+            return Html.Raw(MvcHtmlString.Create("hidden"));
+        }
+
+        return MvcHtmlString.Empty;
+    }
+}
+
+<div class="js-details-container">
     <h2>Details</h2>
+</div>
+
+<div class="js-gadget-display @HiddenClass()">
+    <p class="display-label">
+        Name
+    </p>
+    <p class="display-value">
+        @Model.Name
+    </p>
+    <p class="display-label">
+        Description
+    </p>
+    <p class="display-value">
+        @Model.Description
+    </p>
+    <p class="display-label">
+        Version
+    </p>
+    <p class="display-value">
+        @Model.Version
+    </p>
+    <p class="display-label">
+        Capabiilities
+    </p>
+    <p class="display-value display-value-lg">
+        @Model.Capabilities
+    </p>
+</div>
+
+<div class="js-gadget-editor @HiddenClass(true)">
+    @using (@Html.BeginForm())
+    {
+        <fieldset>
+            <legend></legend>
+            <p class="editor-label">
+                Name
+            </p>
+            <p class="editor-value">
+                @Html.TextBoxFor(m => m.Name)
+            </p>
+            <p class="editor-label">
+                Description
+            </p>
+            <p class="displayeditor-value">
+                @Html.TextAreaFor(m => m.Description, new { rows = 5, cols = 80 })
+            </p>
+            <p class="editor-label">
+                Version
+            </p>
+            <p class="displayeditor-value">
+                @Html.TextBoxFor(m => m.Version)
+            </p>
+            <p class="editor-label">
+                Capabiilities
+            </p>
+            <p class="editor-value editor-value-lg">
+                @Html.TextAreaFor(m => m.Capabilities, new { rows = 20, cols = 80 })
+            </p>
+        </fieldset>
+    }
 </div>

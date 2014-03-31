@@ -1,13 +1,14 @@
-﻿require(['require', 'jquery', 'controllers/summary', 'controllers/details'], function (require) {
+﻿define('app', ['require', 'jquery', 'controllers/summary', 'controllers/details'], function (require, $) {
     'use strict';
-
-    var $ = require('jquery');
+    
     var SummaryController = require('controllers/summary');
     var DetailsController = require('controllers/details');
 
     var App = function () {
         this.summaryController = new SummaryController('.js-summary-container');
         this.detailsController = new DetailsController('.js-details-container');
+
+        this.init();
     }
 
     App.prototype.init = function() {
@@ -49,9 +50,7 @@
         }
     };
 
-    $(function () {
-        window.App = new App();
-        window.App.init();
-    });
+    window.App = new App();
 
+    return window.App;
 });

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxExample", "AjaxExample\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxExample.Tests", "..\..\..\Users\tvanfoss\Documents\Visual Studio 2013\Projects\AjaxExample\AjaxExample.Tests\AjaxExample.Tests.csproj", "{76F6DDA5-4426-4277-87B5-124C4CB242D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{17167AC0-9234-4E44-BE8C-2F2C80FEF06B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{76F6DDA5-4426-4277-87B5-124C4CB242D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76F6DDA5-4426-4277-87B5-124C4CB242D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76F6DDA5-4426-4277-87B5-124C4CB242D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17167AC0-9234-4E44-BE8C-2F2C80FEF06B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17167AC0-9234-4E44-BE8C-2F2C80FEF06B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17167AC0-9234-4E44-BE8C-2F2C80FEF06B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17167AC0-9234-4E44-BE8C-2F2C80FEF06B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

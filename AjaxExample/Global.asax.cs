@@ -8,6 +8,9 @@ namespace AjaxExample
     {
         protected void Application_Start()
         {
+            DependencyConfig.RegisterMvc(DependencyResolver.SetResolver);
+            MapperConfig.Register();
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
